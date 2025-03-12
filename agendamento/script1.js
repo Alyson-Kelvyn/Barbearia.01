@@ -36,7 +36,7 @@ const horarios = ['09:00', '09:30', '10:00', '10:30', '11:00', '11,30', '14:00',
         }
 
         function enviarWhatsApp(agendamento) {
-            const telefoneBarbearia = "5585994015283"; // Substitua pelo número da barbearia com DDD
+            const telefoneBarbearia = "+5585994015283"; // Substitua pelo número da barbearia com DDD
             const dataFormatada = new Date(agendamento.data).toLocaleDateString('pt-BR');
             const mensagem = `👋 Olá, gostaria de confirmar um agendamento!%0A📅 *Data:* ${dataFormatada}%0A⏰ *Horário:* ${agendamento.horario}%0A💇‍♂️ *Tipo de Corte:* ${agendamento.tipoCorte}%0A💳 *Forma de Pagamento:* ${agendamento.pagamento}%0A👤 *Cliente:* ${agendamento.cliente}`;
             const linkWhatsApp = `https://wa.me/${telefoneBarbearia}?text=${mensagem}`;
