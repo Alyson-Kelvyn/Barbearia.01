@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Agendamento de Barbearia</title>
+
+</head>
+<body>
+    <h2>Agendamento de Barbearia</h2>
+    <form id="formAgendamento">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="date" id="data" required>
+        <select id="horarios" required></select>
+        <select id="tipoCorte" required>
+            <option value="Corte Simples">Corte Simples R$20,00</option>
+            <option value="Barba">Barba R$15,00</option>
+            <option value="Corte + Barba">Corte + Barba R$35,00</option>
+        </select>
+        <select id="pagamento" required>
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Cartão">Cartão</option>
+            <option value="Pix">Pix</option>
+        </select>
+        <button type="submit">Agendar</button>
+    </form>
+
+    <h3>Agendamentos:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Cliente</th>
+                <th>Tipo de Corte</th>
+                <th>Pagamento</th>
+            </tr>
+        </thead>
+        <tbody id="listaAgendamentos"></tbody>
+    </table>
+
+    <script src="script1.js"></script>
+</body>
+</html>
